@@ -1,0 +1,18 @@
+{
+  "name": "hexahedron",
+  "version": "0.0.1",
+  "description": "A Cube management application",
+  "main": "hex.js",
+  "scripts": {
+    "dev": "nodemon hex.js",
+    "test-prod": "NODE_ENV=production node hex.js"
+  },
+  "author": "Michael Liu",
+  "license": "ISC",
+  "repository": "https://github.com/TriangularCube/Hex-server.git",
+  "dependencies": {
+    "@feathersjs/configuration": "^2.0.6",
+    "@feathersjs/express": "^1.3.1",
+    "@feathersjs/feathers": "^3.3.1"
+  }
+}
