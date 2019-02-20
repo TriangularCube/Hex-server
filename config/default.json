@@ -1,4 +1,35 @@
 {
   "host": "localhost",
-  "port": 3000
+  "port": 3000,
+  "mongooseDB": "mongodb://localhost:27017/hex",
+
+  "authentication": {
+    "secret": "-----BEGIN EC PRIVATE KEY-----\nMIHcAgEBBEIAOHRzJYAcdtSHKggecvUwmYMSmfe4rVcSfeWrOT4nkJ8/sYirgRIY\ngUuMBBhgNIsXKWV3RMUNEqQmxbv/Jv3rumWgBwYFK4EEACOhgYkDgYYABAF7bmq0\n6QIrg4m5IeABkGFNfUCHEr5FXUYl220juqRQvL86KVqqD2bQMAyeWUUyMhw7CzCB\nnCbp1/9/qotFwksLFACbet3iKswE9N6KkLgw0htoe5cxazStRHMkv+rcMfVVcU0K\nfDwF5aRKGfWPeyF3iZYdwTHjR2Pr/TD50LK99BrZMg==\n-----END EC PRIVATE KEY-----",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/login",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://triangularcube.com/hex",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "ES512",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "service": "users",
+      "usernameField": "\\username",
+      "passwordField": "\\password"
+    }
+  },
+
+  "jwtOptions": {
+    "secretOrKey": "-----BEGIN PUBLIC KEY-----\nMIGbMBAGByqGSM49AgEGBSuBBAAjA4GGAAQBe25qtOkCK4OJuSHgAZBhTX1AhxK+\nRV1GJdttI7qkULy/Oilaqg9m0DAMnllFMjIcOwswgZwm6df/f6qLRcJLCxQAm3rd\n4irMBPTeipC4MNIbaHuXMWs0rURzJL/q3DH1VXFNCnw8BeWkShn1j3shd4mWHcEx\n40dj6/0w+dCyvfQa2TI=\n-----END PUBLIC KEY-----"
+  }
 }
