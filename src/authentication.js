@@ -19,7 +19,7 @@ module.exports = function (app) {
 	app.service('login').hooks({
 		before: {
 			create: [
-				( context ) => console.log( context ),
+				( context ) => console.log( context.data ),
 				authentication.hooks.authenticate( config.strategies )
 			],
 			remove: [

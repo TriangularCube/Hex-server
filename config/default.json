@@ -1,7 +1,7 @@
 {
   "host": "localhost",
   "port": 3000,
-  "mongooseDB": "mongodb://localhost:27017/hex",
+  "mongooseDB": "mongodb+srv://hex-test-cluster-qgqst.azure.mongodb.net/hex?retryWrites=true",
 
   "authentication": {
     "secret": "-----BEGIN EC PRIVATE KEY-----\nMIHcAgEBBEIAOHRzJYAcdtSHKggecvUwmYMSmfe4rVcSfeWrOT4nkJ8/sYirgRIY\ngUuMBBhgNIsXKWV3RMUNEqQmxbv/Jv3rumWgBwYFK4EEACOhgYkDgYYABAF7bmq0\n6QIrg4m5IeABkGFNfUCHEr5FXUYl220juqRQvL86KVqqD2bQMAyeWUUyMhw7CzCB\nnCbp1/9/qotFwksLFACbet3iKswE9N6KkLgw0htoe5cxazStRHMkv+rcMfVVcU0K\nfDwF5aRKGfWPeyF3iZYdwTHjR2Pr/TD50LK99BrZMg==\n-----END EC PRIVATE KEY-----",
@@ -11,6 +11,11 @@
     ],
     "path": "/login",
     "service": "users",
+    "cookie": {
+      "enabled": true,
+      "httpOnly": true,
+      "secure": true
+    },
     "jwt": {
       "header": {
         "typ": "access"

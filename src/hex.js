@@ -1,5 +1,3 @@
-const http = require( 'http' );
-
 const feathers = require( '@feathersjs/feathers' );
 const config = require( '@feathersjs/configuration' );
 const express = require( '@feathersjs/express' );
